@@ -18,22 +18,21 @@
         header {
             background: #333;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 24px;
             font-weight: bold;
         }
 
         nav {
             display: flex;
-            justify-content: center;
-            background: #555;
-            padding: 10px;
+            gap: 20px;
         }
 
         nav a {
             color: #fff;
-            padding: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -48,8 +47,19 @@
             padding: 0 20px;
         }
 
-        .about {
-            text-align: center;
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 0;
         }
 
         .about h1 {
@@ -65,6 +75,10 @@
         .links {
             text-align: center;
             margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .links a {
@@ -81,37 +95,50 @@
         footer {
             text-align: center;
             margin-top: 50px;
-            padding: 20px;
+            padding: 30px;
             background: #333;
             color: #fff;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .container section {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        Michelle Viscaino
+        <span>Michelle Viscaino</span>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#cv">CV</a>
+        </nav>
     </header>
-    
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#cv">CV</a>
-    </nav>
     
     <div class="container">
         <section id="about" class="about">
-            <h1>Hi, I'm Michelle from Ecuador</h1>
-            <p>
-                Did you know? Due to Earth's shape, Ecuador's Mount Chimborazo is closer to space than even Mount Everest!
-            </p>
-            <p>
-                I'm passionate about creating cutting-edge technology for medical applications. My journey started with receiving a <a href="https://www.epn.edu.ec" target="_blank">B.S. degree in electronic engineering from Escuela Politécnica Nacional</a>, Quito, Ecuador, in 2016. After that, I continued with a <a href="https://www.usm.cl" target="_blank">PhD in electronic engineering at Universidad Técnica Federico Santa María</a>, Valparaíso, Chile, in 2023.
-            </p>
-            <p>
-                During this fantastic time, I met my true love: artificial intelligence applied to medical problems.
-            </p>
-            <img src="assets/MVS.jpg" alt="Michelle Viscaino" style="border-radius: 50%; width: 200px; height: 200px;">
+            <div class="about-content">
+                <div class="text-content">
+                    <h1>Hi, I'm Michelle from Ecuador</h1>
+                    <p>
+                        Did you know? Due to Earth's shape, Ecuador's Mount Chimborazo is closer to space than even Mount Everest!
+                    </p>
+                    <p>
+                        I'm passionate about creating cutting-edge technology for medical applications. My journey started with receiving a <a href="https://www.epn.edu.ec" target="_blank">B.S. degree in electronic engineering from Escuela Politécnica Nacional</a>, Quito, Ecuador, in 2016. After that, I continued with a <a href="https://usm.cl/" target="_blank">PhD in electronic engineering at Universidad Técnica Federico Santa María</a>, Valparaíso, Chile, in 2023.
+                    </p>
+                    <p>
+                        During this fantastic time, I met my true love: artificial intelligence applied to medical problems.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets/MVS.jpg" alt="Michelle Viscaino" style="border-radius: 50%; width: 200px; height: 200px;">
+                </div>
+            </div>
         </section>
         
         <section class="links">
